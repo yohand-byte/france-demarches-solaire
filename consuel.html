@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Consuel & BTA photovoltaïque · France Démarches Solaire</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="logo">France <span>Démarches</span> Solaire</div>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="declaration.html">Déclaration</a>
+      <a href="raccordement.html">Raccordement</a>
+      <a href="consuel.html">Consuel</a>
+    </nav>
+    <a class="button" href="#contact">Contact</a>
+  </div>
+</header>
+<main>
+  <div class="crumbs"><a href="index.html">Accueil</a> / Consuel & BTA</div>
+  <section class="hero">
+    <div>
+      <div class="tag">Votre dossier solaire, conforme et prêt.</div>
+      <h1>Consuel & BTA sans surprise</h1>
+      <p class="hero-subtitle">Préparation, dépôt, coordination visite, levée des réserves et transmission BTA/OA. Vous gardez vos équipes sur l’installation.</p>
+      <div class="stats" id="live-stats">
+        <div class="stat"><strong id="stat-delai">0h</strong>Dossier Consuel prêt</div>
+        <div class="stat"><strong id="stat-conformite">0%</strong>Pièces normées NFC 15-100</div>
+        <div class="stat"><strong id="stat-reserves">0%</strong>Levée réserves au premier passage</div>
+      </div>
+    </div>
+    <div class="hero-visual card" aria-label="Inspection Consuel">
+      <img src="assets/hero-accueil.jpg" alt="Inspection électrique d'une installation photovoltaïque">
+      <div class="hero-visual-overlay"></div>
+      <div class="hero-visual-text">Inspection prête · BTA assuré</div>
+    </div>
+  </section>
+
+  <h2 class="section-title">Parcours Consuel</h2>
+  <div class="card-grid">
+    <div class="card"><h3>1 · Pré-diagnostic</h3><p>Vérification des PV essais, continuité, isolement, protections, conformité onduleur.</p></div>
+    <div class="card"><h3>2 · Dossier Consuel</h3><p>Attestation, schémas, pièces justificatives, dépôt et suivi.</p></div>
+    <div class="card"><h3>3 · Visite & levée</h3><p>Coordination du rendez-vous, gestion des réserves, preuves photos.</p></div>
+    <div class="card"><h3>4 · BTA / OA</h3><p>Transmission du BTA et bascule vers l’obligation d’achat.</p></div>
+  </div>
+
+  <h2 class="section-title">Étapes clé</h2>
+  <div class="card-grid">
+    <div class="card"><h3>Checklist</h3><p>Attestation, PV mesures, schémas unifilaire/implantation.</p></div>
+    <div class="card"><h3>Planification</h3><p>Créneau optimisé avec le client, disponibilité installateur.</p></div>
+    <div class="card"><h3>Visite</h3><p>Présence ou accompagnement à distance, réponses immédiates.</p></div>
+    <div class="card"><h3>Clôture</h3><p>Levée des réserves, émission BTA, envoi OA.</p></div>
+  </div>
+
+  <div class="band">
+    <div>
+      <h3 style="margin:0;">Inspection réussie du premier coup.</h3>
+      <p style="margin:4px 0 0; color:#cbd5e1;">Nous préparons les pièces, briefons le client et accompagnons la visite.</p>
+    </div>
+    <a class="button" href="#contact">Planifier le Consuel</a>
+  </div>
+
+  <h2 class="section-title">FAQ</h2>
+  <div class="faq">
+    <details open><summary>Combien de temps pour un rendez-vous ?</summary><p>Selon la zone, quelques jours à deux semaines. Nous optimisons le planning et les pièces pour éviter un second passage.</p></details>
+    <details><summary>Et si l’inspecteur émet des réserves ?</summary><p>Nous documentons, corrigeons et renvoyons les preuves pour lever les réserves sans délai.</p></details>
+    <details><summary>Qui reçoit le BTA ?</summary><p>Nous le transmettons à vous et à votre acheteur (OA) pour enclencher la facturation.</p></details>
+  </div>
+
+  <section id="contact" style="margin-top:48px;">
+    <div class="card" style="max-width:760px;">
+      <h2 style="margin-top:0;">Contact Consuel</h2>
+      <form>
+        <label>Société<br><input required style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,0.05);color:#fff;"></label><br><br>
+        <label>Email<br><input type="email" required style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,0.05);color:#fff;"></label><br><br>
+        <label>Volume chantiers/mois<br>
+          <select style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,0.05);color:#fff;">
+            <option>1-5</option><option>6-20</option><option>21-50</option><option>50+</option>
+          </select>
+        </label><br><br>
+        <button type="submit" class="button">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="footer">France Démarches Solaire · Consuel & BTA</div>
+</main>
+<script>
+function countUp(el, target, suffix=''){ const d=1200,s=performance.now();function t(n){const p=Math.min((n-s)/d,1);el.textContent=Math.floor(target*p)+suffix;if(p<1)requestAnimationFrame(t);}requestAnimationFrame(t);}
+document.addEventListener('DOMContentLoaded',()=>{countUp(document.getElementById('stat-delai'),72,'h');countUp(document.getElementById('stat-conformite'),100,'%');countUp(document.getElementById('stat-reserves'),98,'%');});
+</script>
+</body>
+</html>

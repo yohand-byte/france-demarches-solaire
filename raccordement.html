@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Raccordement panneaux solaires · France Démarches Solaire</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="logo">France <span>Démarches</span> Solaire</div>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="declaration.html">Déclaration</a>
+      <a href="raccordement.html">Raccordement</a>
+      <a href="consuel.html">Consuel</a>
+    </nav>
+    <a class="button" href="#contact">Contact</a>
+  </div>
+</header>
+<main>
+  <div class="crumbs"><a href="index.html">Accueil</a> / Raccordement</div>
+  <section class="hero">
+    <div>
+      <div class="tag">Votre dossier solaire, conforme et prêt.</div>
+      <h1>Raccordement ENEDIS sans friction</h1>
+      <p class="hero-subtitle">Dossier technique complet pour une PTF rapide : schéma unifilaire, attestation assurance, certificat conformité matériel, conventions signées.</p>
+      <div class="stats" id="live-stats-rac">
+        <div class="stat"><strong id="stat-ptf">0h</strong>Dossier prêt PTF</div>
+        <div class="stat"><strong id="stat-pieces">0%</strong>Pièces normées</div>
+        <div class="stat"><strong id="stat-complements">0</strong>Compléments en attente</div>
+      </div>
+    </div>
+    <div class="hero-visual card" aria-label="Raccordement ENEDIS">
+      <img src="assets/hero-accueil.jpg" alt="Technicien raccordant un champ photovoltaïque">
+      <div class="hero-visual-overlay"></div>
+      <div class="hero-visual-text">Raccordement sécurisé</div>
+    </div>
+  </section>
+
+  <h2 class="section-title">Notre méthode</h2>
+  <div class="card-grid">
+    <div class="card"><h3>1 · Préparation</h3><p>Rassemblement des pièces techniques et contractuelles, contrôle cohérence puissance/réseau.</p></div>
+    <div class="card"><h3>2 · Soumission</h3><p>Dépôt ENEDIS, validation du mandataire, suivi de l’accusé et des compléments.</p></div>
+    <div class="card"><h3>3 · Validation</h3><p>Obtention PTF, signature convention, bascule vers Consuel et OA.</p></div>
+  </div>
+
+  <div class="band">
+    <div>
+      <h3 style="margin:0;">Moins d’aller-retour, plus de mise en service.</h3>
+      <p style="margin:4px 0 0; color:#cbd5e1;">Nous anticipons les demandes récurrentes d’ENEDIS et gardons l’historique par chantier.</p>
+    </div>
+    <a class="button" href="#contact">Lancer un raccordement</a>
+  </div>
+
+  <h2 class="section-title">FAQ</h2>
+  <div class="faq">
+    <details open><summary>Délais moyens ?</summary><p>PTF obtenue en général sous 2 à 4 semaines selon zone. Nous déposons le dossier complet pour accélérer.</p></details>
+    <details><summary>Que fait-on si ENEDIS demande un complément ?</summary><p>Nous répondons directement (schéma, certificats, photos coffret) et vous notons dans le suivi.</p></details>
+    <details><summary>Mon client doit-il signer ?</summary><p>Oui, mandat et convention. Nous proposons la signature électronique intégrée.</p></details>
+  </div>
+
+  <section id="contact" style="margin-top:48px;">
+    <div class="card" style="max-width:760px;">
+      <h2 style="margin-top:0;">Contact raccordement</h2>
+      <form>
+        <label>Société<br><input required style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,0.05);color:#fff;"></label><br><br>
+        <label>Email<br><input type="email" required style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,0.05);color:#fff;"></label><br><br>
+        <label>Type d’installation<br>
+          <select style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,0.05);color:#fff;">
+            <option>Résidentiel</option><option>Petit tertiaire</option><option>Grand tertiaire</option><option>Agri</option>
+          </select>
+        </label><br><br>
+        <button type="submit" class="button">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="footer">France Démarches Solaire · Raccordement ENEDIS</div>
+</main>
+<script>
+function countUp(el, target, suffix=''){const d=1200,s=performance.now();function t(n){const p=Math.min((n-s)/d,1);el.textContent=Math.floor(target*p)+suffix;if(p<1)requestAnimationFrame(t);}requestAnimationFrame(t);}
+document.addEventListener('DOMContentLoaded',()=>{countUp(document.getElementById('stat-ptf'),48,'h');countUp(document.getElementById('stat-pieces'),100,'%');document.getElementById('stat-complements').textContent='0';});
+</script>
+</body>
+</html>
