@@ -5,6 +5,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      reason:
+        description: "Justification du déclenchement"
+        required: false
+        default: "Manual trigger"
 
 jobs:
   deploy:
@@ -42,8 +47,8 @@ jobs:
   <body>
     <div class="wrapper">
       <h1>Solaire France Clone</h1>
-      <p>Le site exporté depuis Figma vit dans <code>/sites</code>. GitHub Pages ne peut pas résoudre les chemins absolus (/<em>*</em>). Sans domaine racine, il faut utiliser un fournisseur comme Cloudflare Pages, Netlify ou Vercel.</p>
-      <p>Pour consulter directement la version clonée :<br><a class="button" href="https://france-demarches-solaire.pages.dev" target="_blank" rel="noopener">Ouvrir la démo Cloudflare</a></p>
+      <p>Le site exporté depuis Figma vit dans <code>/sites</code>. GitHub Pages ne peut pas résoudre les chemins absolus (/<em>*</em>). Sans domaine racine, utilisez Cloudflare Pages, Netlify ou Vercel.</p>
+      <p>Démo déjà déployée :<br><a class="button" href="https://france-demarches-solaire.pages.dev" target="_blank" rel="noopener">Ouvrir la démo Cloudflare</a></p>
     </div>
   </body>
 </html>
